@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+		/*
+			Behaviors:
+
+			* Call/Apply
+			* Bind
+			* Map
+			* Filter		
+		*/
+		// 'this' keyword as well as the argumetns array like object
+
+		this.globalVar = {
+			myGlobalVarsMethod: function () {
+				// anything
+			}
+		};
+
+		console.log(this.globalVar);
+
+		this.globalVariable = 'global variable';
+		function globalFunction () {
+			this.innerVariable = 'innerVariable';
+			console.log(this.globalVariable === undefined); // true
+			console.log(this.innerVariable == 'innerVariable'); // true
+			return {
+		        innerFunction: function () {
+		            console.log(this.globalVariable === undefined); // true
+		            console.log(this.innerVariable === undefined); // true
+		        }
+		    }
+		}
+
+		globalFunction().innerFunction();
+
+		// Strict Mode
+
+		this.globalVar = 'globalVar';
+		function nonStrictFunctionTest () {
+			return function () {
+				console.log(this.globalVar); // No defined
+			}
+		};
+
+		function strictFunctionTest() {
+
+			'use strict';
+			return function () {
+				console.log(this.globalVar); // TypeError, cannot property 'globalVar' of undefined
+			}
+		};
+
+		nonStrictFunctionTest();
+		strictFunctionTest();
+
+
+	</script>
+</body>
+</html>
