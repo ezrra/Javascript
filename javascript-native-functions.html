@@ -60,6 +60,109 @@
 		nonStrictFunctionTest();
 		strictFunctionTest();
 
+		// arguments
+
+		function fn () {
+			console.log(typeof arguments);//  Object
+			console.log(arguments[0]) // DeathSatar
+			console.log(arguments[1]); // Tatooine
+		    arguments.push("Naboo"); // TypeError: undefined is not a function
+		    var arguments = "Star Wars";
+		    console.log(arguments[5]); // W
+		}
+
+		fn('DeathSatar', 'Tatooine');
+
+		// prototype
+
+		// var args = Array.prototype.slide.call(arguments);
+
+		// Call/Apply
+
+		this.lightSaberColor = 'none';
+		
+		var darthVader = {
+			team: 'Empire',
+			lightSaberColor: 'Red'
+		}
+
+		var printLightSaberColor = function () {
+			console.log(this.lightSaberColor);
+		}
+
+		printLightSaberColor(); // none
+		printLightSaberColor.call(darthVader); // Red
+		printLightSaberColor.apply(darthVader); // Red
+
+
+		// Bind
+		// Is method is used to invoke methods while explicitly specificating 'this'.
+
+		var lukeSkyWalker = {
+
+			mother: 'Padme Amidala',
+			father: 'Anakin SkyWalker'
+		};
+
+		var getFather = function () {
+			console.log(this.father);
+		};
+
+		getFather(); // undefined
+		getFather.bind(lukeSkyWalker)(); // Anakin Skywalker
+		getFather(lukeSkyWalker); // undefined
+
+		// Map
+
+		function Jedi (name) {
+			this.name = name;
+		};
+
+		var kit 	= new Jedi('Kit');
+		var count 	= new Jedi('Count');
+		var mace 	= new Jedi('Mace');
+
+		var jedis = [kit, count, mace];
+
+		var lastNames = ['Fisto', 'Dooku', 'Windu'];
+
+
+		var jedisWithFullNames = jedis.map(function(currentValue, index, array) {
+    		var clonedJedi = (JSON.parse(JSON.stringify(currentValue))) // Clone currentValue
+    			clonedJedi.name = currentValue.name + " " + lastNames[index];
+		    return clonedJedi;
+		});
+
+		jedisWithFullNames.map(function(currentValue) {
+    		console.log(currentValue.name);
+		});
+
+		// array.forEach(function (element)) { 
+		// 	arr[arr.length] =  fun.call(thisArgs, element)
+		//});}
+
+
+
+		// Filter
+		// Return Array
+		
+		function Person(name, side) {
+		    this.name = name;
+		    this.side = side;
+		}
+
+		var hanSolo = new Person('Han Solo','Rebels');
+		var bobaFett = new Person('Boba Fett','Empire');
+		var princessLeia = new Person('Princess Leia', 'Rebels');
+
+		var people = [hanSolo, bobaFett, princessLeia];
+
+		var enemies = people.filter(function (currentValue, index, array) {
+		    return currentValue.side === 'Empire';
+		})
+		.map(function(currentValue) {
+		    console.log(currentValue.name + " fights for the " + currentValue.side + ".");
+		});
 
 	</script>
 </body>
