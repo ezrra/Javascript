@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	// Publication by scotch
+	// These common patterns
+	// Module, Prototype, Observer, Singleton
+
+	// Context => Where/under what circumstances is the patterns used?
+	// Problemn => What are we trying to solve?
+	// Solution => How does using this pattern solve our proposed problem?
+	// Implmentation => What does the implementation look like?
+
+	// MODULE. 
+
+	var HTMLChanger = (function () {
+
+
+		var contents = 'contents';
+
+		var changeHTML = function () {
+
+
+			var element = document.getElementById('.element');
+			element.innerHTML = contents;
+		};
+
+		return {
+			callChangeHTML: function () {
+				changeHTML();
+				console.log(contents);
+			}
+		}
+	});
+
+	HTMLChanger.callChangeHTML(); //Output contents
+	HTMLChanger.contents; // nodefined
+
+
+	// PROTOTYPE
+
+	var TeslaModels = function () {
+		this.numWheels = 4;
+		this.manufacturer = 'Tesla';
+		this.make = 'Model S';
+	};
+
+	TeslaModels.prototype.go = function () {
+
+	};
+
+	TeslaModels.prototype.stop = function () {
+
+	}
+
+	// OR
+
+	TeslaModels.prototype = {
+
+		go: function () {
+
+		},
+		stop: function () {
+
+		}
+	};
+
+	// OR
+
+	TeslaModels.prototype = function () {
+
+		var got = function () {
+
+		};
+
+		var stop = function () {
+
+		};
+
+		return {
+			presBrakePedal: stop,
+			pressGasPedal: go
+		};
+
+	}();
+
+
+	// Observer Design Patter
+
+</script>
+
+</body>
+</html>
