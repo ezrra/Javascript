@@ -1,0 +1,1 @@
+function hola(){console.log("mensaje hola")}var mensaje="mensaje";alert(mensaje);
