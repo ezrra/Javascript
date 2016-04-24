@@ -93,6 +93,33 @@
 		  	return triangles;
 		}
 
+
+		// More requirements - Colors
+
+		let greenify = (Circle) => {
+
+			return Object.assing({}, circle, {
+				color: "green"
+			});
+		};
+
+		let transformEach = (transform, things) => {
+			let otherTrings = [];
+
+			for (let i = 0; i < things.length; i++) {
+
+				let thing = things[i];
+				let anotherThing = transform(thing);
+				otherTrings.push(anotherThing);
+			}
+			return anotherThing;
+		}
+
+		let squares = transformEach([toSquare, circles]);
+		let greenCircle = transformEach(greenify, circles);
+
+
+		let squares = circles.map(toSquare);
 	</script>
 
 </body>
