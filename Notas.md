@@ -2,7 +2,7 @@
 - Codigo Encapsulado
 - Sin contaminar el scope global
 - Evitar colision de nombres
-- Unidades de codigo separados y ogranizados
+- Unidades de codigo separados y organizados
 - Simular propiedades y metodos privados (miembros privados)
 - Limpieza de codigo
 - Reveling Module Patter: Ser mas consistentes en nuestros scripts
