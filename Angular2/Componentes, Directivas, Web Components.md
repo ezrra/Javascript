@@ -96,12 +96,6 @@ document.getElementById('crearElemento').addEventListener('click', function () {
 ´´´
 
 
-
-
-
-
-
-
 # Ciclo de vida en los Web Components
 
 Diversos estados que pueden tener los Custom Elements a lo largo de su existencia.
@@ -150,8 +144,4 @@ Tenemos registrado nuestro primer custom element.
 </body>
 </html>
 ´´´
-
-
-
-
-
+By //www.desarrolloweb.com
