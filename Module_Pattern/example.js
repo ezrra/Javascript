@@ -3,12 +3,12 @@ var myModule = (function () {
     var counter = 0;
 
     return {
-
-        incrementCounter: function () {
-
+        incrementCounter: function ()
+        {
             return counter++;
         },
-        resetCounter: function () {
+        resetCounter: function ()
+        {
             console.log("Clean, count:" + counter);
             counter = 0;
         }
@@ -40,13 +40,13 @@ var myModule = (function () {
     };
 
     return {
-
         publicProperty: "foo",
-        publicMethodOne: function () {
+        publicMethodOne: function ()
+        {
             // some
         },
-        publicMethodTwo: function () {
-            //
+        publicMethodTwo: function ()
+        {
             privateMethodOne();
         },
         publicMethodThree: privateMethodTwo
