@@ -1,5 +1,5 @@
 // declare public or private properties  at function
-// 
+
 var Counter = (function () {
 
     var counter = 0;
