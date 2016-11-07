@@ -37,7 +37,7 @@ myModule.resetCounter()
 
 ## Revealing Module Pattern (Patron modulo revelado) 
 
-```
+```javascript
 var Counter = (function () {
 	
 	var counter = 0;
@@ -62,7 +62,7 @@ var Counter = (function () {
 
 ### Private
 
-```
+```javascript
 var myModule = (function () {
 	
 	var _privateProperty = 10;
@@ -93,7 +93,6 @@ var myModule = (function () {
 
 });
 
-
 ```
 
 
@@ -101,7 +100,7 @@ var myModule = (function () {
 ### Objetos simples
 ### Objetos literales: Es una manera de defiinir un objeto conforme a la sintaxis definida de Javascript.
 
-```
+```javascript
 var persona = {
   nombre: "Isaac",
   edad: 28,
@@ -113,8 +112,9 @@ var persona = {
 persona.nombre = "Isaac Zepeda"; 
 persona.imprimir(); 
 ```
+
 ### Constructor
-```
+```javascript
 functio Person () {
 	
 	this.name = "Isaac";
@@ -127,7 +127,7 @@ console.log(isaac.name)
 console.log(isaac.count) // undefined, No se puede acceder es una variable local, no se instancia
 ```
 
-```
+```javascript
 function Person(name, age) {
 	this.name =  name || "Josh";
 	this.age = age || 23;
@@ -137,12 +137,11 @@ function Person(name, age) {
 };
 
 var p1 = new Person("Albert", 12);
-
 ```
 
 ## Herencia
 
-```
+```javascript
 function Mamifero () {
 	this.extemidades = 4;
 }
