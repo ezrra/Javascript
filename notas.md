@@ -97,8 +97,10 @@ var myModule = (function () {
 
 
 ## Objetos
-### Objetos simples
-### Objetos literales: Es una manera de defiinir un objeto conforme a la sintaxis definida de Javascript.
+
+### Objetos simples.
+
+### Objetos literales: Es una manera de definir un objeto conforme a la sintaxis definida de Javascript.
 
 ```javascript
 var persona = {
