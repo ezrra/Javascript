@@ -1,3 +1,1 @@
-### Javascript
-
-Notes, Examples, etc. 
+# Javascript
